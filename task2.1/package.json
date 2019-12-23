@@ -1,0 +1,22 @@
+{
+  "name": "mysanapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "webpack --config webpack.config.js --mode=development",
+    "dev": "webpack --config webpack.config.js --watch --mode=development",
+    "build": "webpack --config webpack.config.js --mode=production"
+  },
+  "author": "ashe",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.0",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "san": "^3.8.0"
+  }
+}
