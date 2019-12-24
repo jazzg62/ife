@@ -46,7 +46,10 @@ let San = san.defineComponent({
         this.data.splice('list', [index, 1, t]);   // 对于数组中值的修改，需要来借助splice方法，不然视图不会更新
     },
     add:function(){
-        this.data.push('list', {name:this.data.get('input'),isReview:false,isqualified:false});
+        let input = this.data.get('input');
+        if(input === '' || input === undefined)
+            input = '匿名';
+        this.data.push('list', {name:input,isReview:false,isqualified:false});
         this.data.set('input', '');
     },
     remove:function(value){
