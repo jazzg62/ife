@@ -1,4 +1,4 @@
-import san,{DataTypes} from 'san';
+import san from 'san';
 
 let son = san.defineComponent({
     template:`
@@ -8,6 +8,11 @@ let son = san.defineComponent({
             <button type="button" on-click="sendMessage" >通知父组件</button>
         </form>
     `,
+    initData:function(){
+        return {
+            message:""
+        }
+    },
     sendMessage:function(){
         this.dispatch('dealMessage', this.data.get('message'));
     }
@@ -16,7 +21,7 @@ let son = san.defineComponent({
 let father = san.defineComponent({
     template:`
         <div>
-            <slot var-message="{{message}}"></slot>
+            <slot></slot>
             <h3 class="{{className}}">{{prefix}}:{{message}}</h3>
         </div>
     `,
