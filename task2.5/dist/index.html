@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MySanApp</title>
+    <link rel="stylesheet" href=".\css\font-awesome-4.7.0\css\font-awesome.min.css">
+    <style>
+        .input{
+            display: inline-block;
+        }
+        .input>input{
+            outline: none;
+            padding:4px;
+            border:1px solid #F5F5F5;
+            height: 18px;
+            font-size: 14px;
+            color: #C4C4C4;
+            line-height: 18px;
+            vertical-align: center;
+        }
+         .input>input:hover{
+            border: #C6C6C6 1px solid ;
+        }
+        .input>input:read-only{
+            background: #F9F9F9;
+        }
+        .input>input:focus{
+            border: #CCCCCC 1px solid;
+            color: #C8C8C8;
+            color: #676767;
+        }
+        .noterror{
+            opacity: 0;
+        }
+        .error{
+            display: inline-block;
+            /* width: 80px; */
+            padding: 0 10px;
+            height: 28px;
+            text-align: center;
+            color: red;
+            background-color: #FFF2F2;
+        }
+        .checkbox{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .checkbox>li{
+            display: inline;
+            text-align: center;
+        }
+        .checkbox>li>i{
+        }
+        .disabled>i{
+            color: rgb(196, 195, 195);
+        }
+    </style>
+</head>
+<body>
+    <script src="bundle.js"></script>
+</body>
+</html>
