@@ -1,0 +1,52 @@
+<template>
+<div>
+  <button on-click="toggle">TOGGLE</button>
+  <span s-if="show" s-transition="hook">
+    Transition Layer
+  </span>
+</div>
+</template>
+
+<script>
+export default {
+  initData() {
+    return {show: true};
+  },
+  toggle() {
+    this.data.set('show',!this.data.get('show'));
+  },
+  hook: {
+    /* your answer */
+    enter:function(el, done){
+      el.classList.add('before-enter');
+      el.classList.add('leave');       // 重新添加默认样式，默认为leave 样式
+      setTimeout((el)=>{
+        el.classList.remove('before-enter');
+        el.classList.remove('leave');
+        el.classList.add('enter');
+        done()
+      },100,el);
+    },
+    leave:function(el,done){ 
+      el.classList.remove('enter');     // 移除enter时候的样式，改为leave样式
+      el.classList.add('leave');
+      setTimeout(done,500);
+      // done()
+    }
+  }
+}
+</script>
+
+<style>
+.enter, .leave {
+  transition: all .5s;
+}
+
+.before-enter, .leave {
+  opacity: 0;
+}
+
+.enter, .before-leave {
+  opacity: 1;
+}
+</style>
