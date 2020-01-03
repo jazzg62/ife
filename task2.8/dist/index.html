@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hello world</title>
+    <link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css" />
+    <style>
+        .panel{
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid gray;
+            display: flex;
+            flex-direction: column;
+        }
+        .panel>div:first-child{
+            display: flex;
+        }
+        .left{
+            /* background-color: red; */
+            flex: 0 0 auto;
+            vertical-align: center;
+            line-height: 36px;
+        }
+        .description{
+            flex: 1 0 auto;
+            vertical-align: center;
+            line-height: 36px;
+            margin-left: 20px;
+            font-size: 12px;
+            color: rgba(0,0,0,.54);
+        }
+        .right{
+            background-color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: none;
+            color: black;
+            flex: 0 0 auto;
+            transition: all 0.5s ;
+            cursor: pointer;
+        }
+        .right:hover{
+            background-color: #E8E8E8;
+        }
+        .right:focus{
+            outline: none;
+        }
+        .rotate180{
+            transform: rotate(180deg);
+        }
+        .rotate360{
+            transform: rotate(0deg);
+        }
+        .panel>p{
+            overflow: auto;
+        }
+        .hide{
+            height: 0;
+            opacity: 0;
+            transition: all .5s ease-in-out;
+        }
+        .show{
+            height: 80px;
+            opacity: 1;
+            transition: all .5s ease-in-out;
+        }
+        p{
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="panel">
+        <div>
+            <div class="left">
+                expansion panel
+            </div>
+            <div class="description">
+                test
+            </div>
+            <button class="right">
+                <i class="fa fa-angle-down"></i>
+            </button>
+        </div>
+        <p class="hide">家用变律究在无许四眼军儿该，并解交提被的O村民收隶。少同关能起交离响关放便权，水导证备文两呜详克达。院律利一们以白方机，他制工应参三教，命适U称平当日。每造或在个质条动七出前，切些指取细状并育收车段，强感届来京告说件K。接感车员题复市越中，知该果接心可育只什，先杨来八十呆苏。级究行实酸电军上研打近，热率外十政材都上日空。设于自验山油省连，用飞市白领业重展，许O苏称克屈。多角社选定风社技美传机及什，布素器行导边派养车太，连龙步F观秀向细越财容。听今单平一准计号主，展易其院青连步，电题-更箩深乱。几公影导世热装量，需状阶使安海情则，不先I坊金医少。金电名外流连战你做外打声达还更，种常世了联花究M坑节K说两。除研任表议主组开，根集本点白界流，实2凝节八社。</p>
+    </div> -->
+    <script src="bundle.js"></script>
+    <script>
+        // let flag = true;
+        // document.querySelector('.right').addEventListener('click', function(e){
+        //     console.log(e);
+        //     if(flag){
+        //         e.target.classList.remove('rotate360')
+        //         e.target.classList.add('rotate180');
+        //         flag = !flag;
+        //     }else{
+        //         e.target.classList.add('rotate360')
+        //         e.target.classList.remove('rotate180');
+        //         flag = !flag;
+        //     }
+        //     let p = document.querySelector('.panel>p');
+        //     p.classList.toggle('hide');
+        //     p.classList.toggle('show');
+        // })
+    </script>
+</body>
+</html>
